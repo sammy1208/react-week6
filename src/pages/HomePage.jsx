@@ -5,7 +5,7 @@ export default function HomePage () {
         <div className="container">
             <div className="text-center d-flex justify-content-center">
                 <img
-                src="./public/1727712696713.jpg"
+                src="/1727712696713.jpg"
                 alt="home"
                 style={{ height: "100vh", width: "100%", objectFit: "cover" }}
                 />
