@@ -14,7 +14,6 @@ function Pagination({ products, pageInfo, getProduct }) {
               <a
                 onClick={() => handlePageChange(pageInfo.current_page - 1)}
                 className="page-link"
-                href="#"
               >
                 上一頁
               </a>
@@ -30,7 +29,6 @@ function Pagination({ products, pageInfo, getProduct }) {
                 <a
                   onClick={() => handlePageChange(index + 1)}
                   className="page-link"
-                  href="#"
                 >
                   {index + 1}
                 </a>
@@ -41,7 +39,6 @@ function Pagination({ products, pageInfo, getProduct }) {
               <a
                 onClick={() => handlePageChange(pageInfo.current_page + 1)}
                 className="page-link"
-                href="#"
               >
                 下一頁
               </a>

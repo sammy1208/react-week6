@@ -53,8 +53,11 @@ function LoginPage( {setIsAuth} ) {
         /(?:(?:^|.*;\s*)hexToken\s*\=\s*([^;]*).*$)|^.*$/,
         "$1"
     );
-    axios.defaults.headers.common["Authorization"] = token;
-    checkUser();
+    if(token.length > 0){
+        axios.defaults.headers.common["Authorization"] = token;
+        checkUser();
+    }
+
   },[])
 
   return (
