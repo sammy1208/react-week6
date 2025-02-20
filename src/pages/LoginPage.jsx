@@ -9,10 +9,10 @@ const routes = [
     { path: "/", name: "首頁" },
 ];
 
-function LoginPage( {setIsAuth} ) {
+function LoginPage( ) {
   const [account, setAccount] = useState({
-    username: "qa821746@gmail.com",
-    password: "az821746"
+    username: "",
+    password: ""
   });
 
   const navigate = useNavigate();

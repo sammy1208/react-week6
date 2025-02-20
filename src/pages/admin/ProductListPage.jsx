@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 // import reactLogo from './assets/react.svg'
 import axios from "axios";
 // import { Modal } from "bootstrap";
-import Pagination from "../components/Pagination";
-import ProductModal from "../components/ProductModal";
-import DelProductModal from "../components/DelProductModal";
+import Pagination from "../../components/Pagination";
+import ProductModal from "../../components/ProductModal";
+import DelProductModal from "../../components/DelProductModal";
 // import ProductPage from './pages/ProductPage';
 // import './App.css'
 
@@ -24,7 +24,7 @@ const defaultModalState = {
   imagesUrl: [""]
 };
 
-function ProductPage({ setIsAuth }) {
+function ProductPage( ) {
   const [products, setProduct] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isDleModalOpen, setIsDleModalOpen] = useState(false);
@@ -59,9 +59,8 @@ function ProductPage({ setIsAuth }) {
       );
       setProduct(res.data.products);
       setPageInfo(res.data.pagination);
-      console.log(res.data)
     } catch (error) {
-      alert(error.data.message)
+      alert(error.message)
     }
   };
 
@@ -69,9 +68,8 @@ function ProductPage({ setIsAuth }) {
     try {
       await axios.post(`${BASE_URL}/v2/api/user/check`);
       getProduct();
-      setIsAuth(true);
     } catch (error) {
-      alert(error.data.message)
+      alert(error.message)
     }
   };
 

@@ -5,8 +5,9 @@ import ProductsPage from "../pages/ProductsPage"
 import ShoppCartPage from "../pages/ShoppCartPage"
 import ProductsDetailPage from "../pages/ProductsDetailPage"
 import LoginPage from "../pages/LoginPage"
-import ProductListPage from "../pages/ProductListPage"
+import ProductListPage from "../pages/admin/ProductListPage"
 import AdminLayout from "../layouts/AdminLayout "
+import NotFound from "../pages/NotFound"
 
 const router = createHashRouter ([
     {
@@ -45,6 +46,10 @@ const router = createHashRouter ([
                 element: <ProductListPage />
             }
         ]
+    },
+    {
+        path: '*',
+        element: < NotFound />
     }
 ])
 
